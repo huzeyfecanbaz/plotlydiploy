@@ -21,7 +21,7 @@ function init() {
 }
 
 // Initialize the dashboard
-
+init();
 
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
@@ -117,4 +117,4 @@ function buildCharts(sample) {
   });
 }
 
-init();
+
