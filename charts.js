@@ -66,22 +66,22 @@ function buildCharts(sample) {
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var ids=result.otu_ids;
-    var labels=result.otu_labels.slice(0,10).reverse();
-    var values=result.sample_values.slice(0,10).reverse();
+    var labels=result.otu_labels;
+    var values=result.sample_values;
 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
 
-    var yticks = ids.map(sampleObj=>"OTU"+sampleObj).slice(0,10).reverse();
+    var yticks = ids.slice(0,10).map(sampleObj=>`OTU ${sampleObj}`).reverse();
 
     // 8. Create the trace for the bar chart. 
     var barData = [{
-      x:values,
+      x:values.slice(0,10).reverse(),
       y:yticks,
       type:"bar",
       orientation:"h",
-      text:labels}];
+      text:labels.slice(0,10).reverse()}];
     // 9. Create the layout for the bar chart. 
     var barLayout = {title:"Top 10 Bacteria Culture Found"
      
