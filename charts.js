@@ -97,10 +97,10 @@ function buildCharts(sample) {
       y:bubleValues,
       text:"bubleLabels",
       mode:"markers",
-        marker:{
-          size:bubleValues,
-          color:bubleValues,
-          colorscale:"Portland"
+      marker:{
+        size:bubleValues,
+        color:bubleValues,
+        colorscale:"Portland"
         }
     }];
 
