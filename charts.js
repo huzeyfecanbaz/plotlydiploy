@@ -93,12 +93,12 @@ function buildCharts(sample) {
     // 1. Create the trace for the bubble chart.
     var bubbleData = [{
       x:ids,
-      y:bubbleValues,
-      text:"bubbleLabels",
+      y:values,
+      text:labels,
       mode:"markers",
       marker:{
-        size:bubbleValues,
-        color:bubbleValues,
+        size:values,
+        color:ids,
         colorscale:"Portland"
         }
     }];
